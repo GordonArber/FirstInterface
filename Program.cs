@@ -6,7 +6,13 @@ namespace FirstInterface
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var car = new Car(0);
+            
+            Console.WriteLine("How much fuel do you want to add to your car?");
+            if (car.Refuel(Convert.ToInt32(Console.ReadLine())))
+            {
+                car.Drive();
+            }
         }
     }
 }
